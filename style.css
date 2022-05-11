@@ -35,9 +35,14 @@ main {
     }
 
 .grid-container {
+    display: flex;
     width: 350px;
     height: 350px;
 }
+    .grid-container div {
+        outline: red 1px solid;
+        flex: 1;
+    }
 
 
 
