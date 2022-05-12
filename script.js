@@ -1,5 +1,6 @@
 let colorMode = 'black';
-
+let warm = ['#001219', '#005f73', '#0a9396', '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'];
+let cool = ['#03045E', '#023E8A', '#0077B6', '#0096C7', '#00B4D8', '#48CAE4', '#90E0EF', '#ade8f4', '#caf0f8'];
 
 function generateColumns(gridSideLength) {
     const gridContainer = document.querySelector('.grid-container');
@@ -30,5 +31,15 @@ function setColorMode(newMode) {
 }
 
 function drawColor(gridSquare) {
-    gridSquare.style.background = 'black';
+    if(colorMode === 'black') {
+        gridSquare.style.background = 'black';
+    }
+    else if(colorMode === 'warm') {
+        const randomColor = warm[Math.floor(Math.random() * warm.length)];
+        gridSquare.style.background = randomColor;
+    }
+    else if(colorMode === 'cool') {
+        const randomColor = cool[Math.floor(Math.random() * cool.length)];
+        gridSquare.style.background = randomColor;
+    }
 }
