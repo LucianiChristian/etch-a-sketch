@@ -14,3 +14,8 @@ function generateColumns(gridSideLength) {
         }
     }
 }
+
+function clearGrid() {
+    const gridContainer = document.querySelector('.grid-container');
+    gridContainer.innerHTML = "";
+}
