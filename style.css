@@ -54,8 +54,11 @@ main {
 
 /* temp for visualization */
 header, footer {
-    background-color: rgb(128 128 192 / 61%)
+    background-color: rgb(116, 116, 201)
+}
+main {
+    background-color: #b1b1d8;
 }
 .grid-container {
-    background-color: rgba(0, 0, 255, 0.445);
+    background-color: rgba(121, 117, 117, 0.185);
 }
