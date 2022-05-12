@@ -40,11 +40,14 @@ main {
     height: 350px;
 }
     .grid-container div {
-        outline: red 1px solid;
+        outline: white 1px solid;
         flex: 1;
     }
 
-
+    .grid-column {
+        display: flex;
+        flex-direction: column;
+    }
 
 
 
