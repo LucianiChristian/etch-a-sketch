@@ -1,3 +1,4 @@
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +6,16 @@
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    min-height: 100vh;
     font-family: 'Dosis', sans-serif;
 }
 
 header, footer {
+    background-color: #595757;
+    color: white;
     text-align: center;
 }
 
@@ -24,6 +28,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
+
     padding: 5px;
 }
 
@@ -54,42 +59,28 @@ main {
 
 .grid-container {
     display: flex;
+
     width: 380px;
     height: 380px;
+    background-color: rgba(121, 117, 117, 0.185);
     box-shadow: 5px 5px 8px black;
     padding: 20px;
     border-radius: 10px;
 }
-    .grid-container div {
+    .grid-column, .grid-square {
         outline: white 1px solid;
         flex: 1;
     }
-
     .grid-column {
         display: flex;
         flex-direction: column;
+
+        padding: 1px;
+    }
+    .grid-square {
+        border-radius: 3px;
     }
 
-
-
-
-/* temp for visualization */
-header, footer {
-    background-color: #595757;
-    color: white;
-}
-.grid-container {
-    background-color: rgba(121, 117, 117, 0.185);
-}
-.grid-column div {
-    border-radius: 3px;
-}
-.grid-column {
-    padding: 1px;
-    outline-color: #e6e5e5;
-}
-
-/* media queries */
 @media only screen and (max-width: 600px) {
     main {
       flex-direction: column-reverse;
@@ -97,5 +88,4 @@ header, footer {
       gap: 20px;
       padding: 30px 0px;
     }
-
   }

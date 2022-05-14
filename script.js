@@ -2,7 +2,7 @@ let colorMode = 'black';
 let warm = ['#001219', '#005f73', '#0a9396', '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'];
 let cool = ['#03045E', '#023E8A', '#0077B6', '#0096C7', '#00B4D8', '#48CAE4', '#90E0EF', '#ade8f4', '#caf0f8'];
 
-function generateColumns(gridSideLength) {
+function generateGrid(gridSideLength) {
     const gridContainer = document.querySelector('.grid-container');
     let gridColumn;
 
@@ -11,11 +11,14 @@ function generateColumns(gridSideLength) {
     for(let i = 0; i < gridSideLength; i++) {
         gridColumn = document.createElement('div');
         gridColumn.classList.add('grid-column');
+
         gridContainer.appendChild(gridColumn);
+
         for(let j = 0; j < gridSideLength; j++) {
             gridSquare = document.createElement('div');
             gridSquare.setAttribute('onmouseover', 'drawColor(this)');
-            gridSquare.classList.add('grid-square');      
+            gridSquare.classList.add('grid-square');    
+
             gridColumn.appendChild(gridSquare);
         }
     }
