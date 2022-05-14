@@ -26,8 +26,20 @@ function clearGrid() {
 }
 
 function setColorMode(newMode) {
+    const gridContainer = document.querySelector('.grid-container');
+    
     colorMode = newMode;
     console.log(colorMode);
+
+    if(colorMode === 'black') {
+        gridContainer.style.boxShadow = '5px 5px 8px black';
+    }
+    else if (colorMode === 'cool') {
+        gridContainer.style.boxShadow = `5px 5px 8px ${cool[0]}, 10px 10px 8px ${cool[Math.floor(cool.length / 2)]}, 15px 15px 8px ${cool[cool.length - 1]}`;
+    }
+    else if (colorMode === 'warm') {
+        gridContainer.style.boxShadow = `5px 5px 8px ${warm[0]}, 10px 10px 8px ${warm[Math.floor(warm.length / 2)]}`;
+    }
 }
 
 function drawColor(gridSquare) {
