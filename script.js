@@ -14,15 +14,20 @@ function generateColumns(gridSideLength) {
         gridContainer.appendChild(gridColumn);
         for(let j = 0; j < gridSideLength; j++) {
             gridSquare = document.createElement('div');
-            gridSquare.setAttribute('onmouseover', 'drawColor(this)');      
+            gridSquare.setAttribute('onmouseover', 'drawColor(this)');
+            gridSquare.classList.add('grid-square');      
             gridColumn.appendChild(gridSquare);
         }
     }
 }
 
 function clearGrid() {
+    const gridSquares = document.querySelectorAll('.grid-square');
     const gridContainer = document.querySelector('.grid-container');
-    gridContainer.innerHTML = "";
+
+    gridSquares.forEach(function(square) {
+        square.style.background = gridContainer.style.background;
+      });
 }
 
 function setColorMode(newMode) {
